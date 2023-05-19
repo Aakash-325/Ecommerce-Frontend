@@ -15,7 +15,8 @@ const Categories = () => {
       templateColumns="repeat(4, 1fr)"
       gap={4}
       m="1rem"
-      mb={6}
+      mb={16}
+      display={{ base: 'none', md: 'grid' }}
     >
       <GridItem
         rowSpan={2}
@@ -29,11 +30,6 @@ const Categories = () => {
         }}
       >
         <Image src={Shirt} height="100%" width="100%" objectFit="cover" />
-        <Box position="relative" bottom="0" width="100%" p="1rem">
-          <Text color="white" fontSize="2rem" fontWeight="bold">
-            Wearables
-          </Text>
-        </Box>
       </GridItem>
       <GridItem
         rowSpan={1}

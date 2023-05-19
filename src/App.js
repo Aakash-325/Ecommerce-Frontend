@@ -5,7 +5,7 @@ import Auth from "./Pages/Auth";
 import Footer from "./components/Footer";
 import ProductDetails from "./Pages/ProductDetails";
 import FilteredProduct from "./components/FilteredProduct";
-import "./Styles/style.css";
+import "./styles/style.css";
 import CartPage from "./Pages/CartPage";
 
 function App() {

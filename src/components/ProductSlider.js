@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {Box, Flex, Text, Image} from '@chakra-ui/react'
+import React, { useState } from 'react';
+import { Box, Flex, Text, Image } from '@chakra-ui/react'
 
 const ProductSlider = () => {
   const arrowStyles = {
@@ -53,26 +53,26 @@ const ProductSlider = () => {
     ml: `-${currentSlide * 100}%`,
   };
   return (
-      <Flex w="full" overflow="hidden" pos="relative">
-        <Flex h="400px" w="full" {...carouselStyle}>
-          {slides.map((slide, sid) => (
-            <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
-              <Image
-                src={slide.img}
-                alt="carousel image"
-                boxSize="full"
-                backgroundSize="cover"
-              />
-            </Box>
-          ))}
-        </Flex>
-        <Text {...arrowStyles} left="0" onClick={prevSlide}>
-          &#10094;
-        </Text>
-        <Text {...arrowStyles} right="0" onClick={nextSlide}>
-          &#10095;
-        </Text>
+    <Flex w="full" overflow="hidden" pos="relative" my={{ base: 6, md: 0 }}>
+      <Flex h={{ base: "250px", md: "400px" }} w="full" {...carouselStyle}>
+        {slides.map((slide, sid) => (
+          <Box key={`slide-${sid}`} boxSize="full" shadow="md" flex="none">
+            <Image
+              src={slide.img}
+              alt="carousel image"
+              boxSize="full"
+              objectFit="cover"
+            />
+          </Box>
+        ))}
       </Flex>
+      <Text {...arrowStyles} left="0" onClick={prevSlide}>
+        &#10094;
+      </Text>
+      <Text {...arrowStyles} right="0" onClick={nextSlide}>
+        &#10095;
+      </Text>
+    </Flex>
   );
 };
 

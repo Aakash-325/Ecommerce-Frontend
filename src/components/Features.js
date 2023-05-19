@@ -10,7 +10,7 @@ const Features = () => {
       color="white"
       justifyContent="space-around"
       alignItems="center"
-      m="1rem"
+      m={{ base: "0", md: "1rem" }}
       bg="orange.100"
       p="2rem"
       flexWrap="wrap" // Allow flex items to wrap
